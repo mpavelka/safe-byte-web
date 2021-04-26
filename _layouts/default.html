@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/bootstrap-4.5.2-dist/css/bootstrap.min.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}">
+    <script src="{{ '/assets/jquery-3.5.1.slim.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/smooth-scroll.polyfills.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/bootstrap-4.5.2-dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body data-spy="scroll" data-target="#navbar">
+    {% include navigation.html %}
+    {{ content }}
+    <script type="text/javascript">
+        new SmoothScroll('a[href*="#"]');
+    </script>
+  </body>
+</html>
