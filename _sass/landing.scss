@@ -1,0 +1,36 @@
+#landing {
+	header {
+		.container {
+			background-image: url('/assets/img/secure-world.svg');
+			background-size: 50%;
+			background-repeat: no-repeat;
+			background-position: 90%;
+
+			.row {
+				height: 430px;
+			}
+		}
+		img.logo {
+			width: 60%;
+			max-width: 100%;
+		}
+	}
+
+	section#subheader {
+		background-image: url(/assets/img/wave2.svg);
+		background-position: 50% 105%;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-color: #316782;
+
+		padding-top:2rem;
+		padding-bottom:6rem;
+		h1 {
+			font-size: 2rem;
+		}
+		h2 {
+			font-size: 1rem;
+		}
+	}
+}
+

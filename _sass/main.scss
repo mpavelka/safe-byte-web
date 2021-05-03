@@ -13,3 +13,15 @@
 @mixin mt-5 {
   margin-top: 3rem!important;
 }
+
+body {
+	font-family: 'Noto Serif', serif;
+}
+
+section {
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+}
+
+@import "header.scss";
+@import "landing.scss";
