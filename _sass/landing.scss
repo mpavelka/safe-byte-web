@@ -17,20 +17,42 @@
 	}
 
 	section#subheader {
-		background-image: url(/assets/img/wave2.svg);
-		background-position: 50% 105%;
-		background-size: 100% auto;
-		background-repeat: no-repeat;
 		background-color: #316782;
 
 		padding-top:2rem;
-		padding-bottom:6rem;
+		padding-bottom:2rem;
 		h1 {
 			font-size: 2rem;
 		}
 		h2 {
 			font-size: 1rem;
 		}
+	}
+
+	section#howwedo {
+		background-image: url(https://previews.123rf.com/images/kasto/kasto1712/kasto171200003/91295689-startup-business-and-entrepreneurship-problem-solving-young-ai-programmers-and-it-software-developer.jpg);
+		background-size: cover;
+		position: relative;
+
+		.card-title {
+			color: #2b363b;
+			font-weight: bold;
+		}
+		.card-body.icon {
+			font-size: 6rem;
+			color: #2b363b;
+		}
+	}
+
+	section#howwedo::before {
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url(/assets/img/wave2.svg);
+		background-position: 50% 0;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
 	}
 }
 
