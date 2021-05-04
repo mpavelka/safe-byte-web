@@ -16,8 +16,21 @@
 		}
 	}
 
+	section {
+		padding-bottom:4rem;
+		h2 {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+	}
+
 	section#subheader {
 		background-color: #316782;
+
+		h2 {
+			padding-top: 0rem;
+			padding-bottom: 0rem;
+		}
 
 		padding-top:2rem;
 		padding-bottom:2rem;
@@ -53,6 +66,17 @@
 		background-position: 50% 0;
 		background-size: 100% auto;
 		background-repeat: no-repeat;
+	}
+
+	section#whatweknow {
+		h3 {
+			color: #2b363b;
+		}
+	}
+
+	section#contact {
+		background-color: #2b363b;
+		color: #f0f0f0;
 	}
 }
 
