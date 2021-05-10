@@ -1,0 +1,69 @@
+<form id="contactForm">
+	<div class="form-group">
+		<label for="exampleInputEmail1">Emailová adresa</label>
+		<input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
+		<small id="emailHelp" class="form-text">Vaši emailovou adresu nikdy nevyzradíme třetí straně.</small>
+	</div>
+	<button type="submit" class="btn btn-primary">Odeslat</button>
+	<div class="alert alert-success" role="alert">
+		<strong>Těšíme se na spolupráci!</strong> V nejbližší době Vás budeme kontaktovat na uvedenou emailovou adresu.
+	</div>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$("#contactForm").data("submitted", "no").submit(function(e) {
+		e.preventDefault()
+
+		// Vars
+		var form = $(e.target)
+		var inputs = form.find("input")
+		var button = form.find("button[type='submit']")
+
+		if (form.data("submitted") == "yes")
+			return;
+
+		// Disable fields
+		inputs.attr("disabled", true);
+		button.attr("disabled", true);
+
+		// Get data
+		var json = {}
+		inputs.each(function() {
+			json[$(this).attr("name")] = $(this).val()
+		})
+		form.find("select").each(function() {
+			json[$(this).attr("name")] = $(this).find("option:selected").val()
+		})
+
+		// Submit
+		$.ajax({
+			type: "POST",
+			url: form.attr("action"),
+			data: JSON.stringify(
+				$.extend(
+					{},
+					json
+				)
+			),
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(data) {
+				form.data("submitted", "yes")
+				// Hide submit button
+				button.hide();
+				// Show success
+				form.addClass("success");
+			}
+		})
+			.fail(function() {
+				alert("Jejda, něco se pokazilo :( Zkuste prosím akci provést později.");
+			})
+			.always(function() {
+				button.attr("disabled", false);
+				inputs.attr("disabled", false);
+			})
+	})
+
+})
+</script>

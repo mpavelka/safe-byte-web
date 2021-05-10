@@ -47,6 +47,9 @@
 		background-size: cover;
 		position: relative;
 
+		.card {
+			min-height: 12rem;
+		}
 		.card-title {
 			color: #2b363b;
 			font-weight: bold;
@@ -75,8 +78,13 @@
 	}
 
 	section#contact {
-		background-color: #2b363b;
+		background-color: #316782;
 		color: #f0f0f0;
+	}
+
+	footer {
+		background-color: #2b363b;
+		color: #737373;
 	}
 }
 

@@ -1,0 +1,17 @@
+#contactForm {
+	.alert-success {
+		display: none;
+	}
+}
+
+#contactForm.success {
+	.alert-success {
+		display: block;
+	}
+	.form-group {
+		display: none;
+	}
+	button {
+		display: none;
+	}
+}
