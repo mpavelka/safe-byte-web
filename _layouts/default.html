@@ -16,7 +16,7 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body data-spy="scroll" data-target="#navbar">
+  <body id="page-{% if page.id == null %}root{% else %}{{ page.d | replace: '/', '-' }}{% endif %}" data-spy="scroll" data-target="#navbar">
     {% include navigation.html %}
     {{ content }}
     <script type="text/javascript">
@@ -36,5 +36,38 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<script type="text/javascript">
+    var $window = $(window);
+    var $body = $("body");
+
+    function onScroll() {
+        var scrollTop = $window.scrollTop();
+        console.log(scrollTop);
+        if (scrollTop > 0) {
+            $body.addClass("scroll");
+        } else {
+            $body.removeClass("scroll");
+        }
+        if(scrollTop > 50) {
+            $body.addClass("scroll-50")
+        } else {
+            $body.removeClass("scroll-50");
+        }
+        if(scrollTop > 100) {
+            $body.addClass("scroll-100")
+        } else {
+            $body.removeClass("scroll-100");
+        }
+        if(scrollTop > 200) {
+            $body.addClass("scroll-200")
+        } else {
+            $body.removeClass("scroll-200");
+        }
+    }
+    $(document).ready(function() {
+        $window.scroll(onScroll)
+        onScroll()
+    })
+</script>
   </body>
 </html>

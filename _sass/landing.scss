@@ -1,3 +1,17 @@
+body#page-root {
+	nav#navbar .navbar-brand>img {
+		animation-delay: 0.3s;
+		opacity: 0;
+		transition: opacity 0.1s;
+	}
+}
+body#page-root.scroll-200 {
+	nav#navbar .navbar-brand>img {
+		opacity: 1;
+	}
+}
+
+
 #landing {
 	header {
 		.container {
