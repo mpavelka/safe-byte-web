@@ -16,7 +16,7 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body id="page-{% if page.id == null %}root{% else %}{{ page.d | replace: '/', '-' }}{% endif %}" data-spy="scroll" data-target="#navbar">
+  <body {% if page.id != null %}id="page-{{ page.id }}"{% endif %} class="layout-{{ page.layout }}" data-spy="scroll" data-target="#navbar">
     {% include navigation.html %}
     {{ content }}
     <script type="text/javascript">

@@ -15,13 +15,27 @@
 }
 
 body {
-	font-family: 'Noto Serif', serif;
+	font-family: 'Kohinoor Bangla', sans-serif;
+	background-color: #fafafa;
 }
 
-section {
+header {
+	background-color: #2b363b;
 }
+
+footer {
+  background-color: #2b363b;
+  color: #737373;
+}
+
+section#contact {
+  background-color: #316782;
+  color: #f0f0f0;
+  padding-bottom:4rem;
+}
+
 
 @import "navigation.scss";
-@import "header.scss";
-@import "landing.scss";
+@import "layout/landing.scss";
+@import "layout/page.scss";
 @import "contactform.scss";

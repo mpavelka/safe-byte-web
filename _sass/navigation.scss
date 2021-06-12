@@ -9,7 +9,26 @@ nav#navbar {
 	.navbar-brand>img {
 		max-height: 2rem;
 	}
+	.dropdown-menu {
+		// background-color: #2b363b;
+
+		a {
+			color: #2b363b;
+		}
+		a:active {
+			background-color: #f8f9fa;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.navbar-nav .nav-link {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
 }
+
+
 
 body.scroll-50 nav#navbar {
 	background-color: #2b363b;
